@@ -1,0 +1,336 @@
+export default [
+  {
+    small: 'ё',
+    caps: 'Ё',
+    code: 'Backquote',
+  },
+  {
+    small: '1',
+    caps: '1',
+    shift: '!',
+    code: 'Digit1',
+  },
+  {
+    small: '2',
+    caps: '2',
+    shift: '"',
+    code: 'Digit2',
+  },
+  {
+    small: '3',
+    caps: '3',
+    shift: '№',
+    code: 'Digit3',
+  },
+  {
+    small: '4',
+    caps: '4',
+    shift: ';',
+    code: 'Digit4',
+  },
+  {
+    small: '5',
+    caps: '5',
+    shift: '%',
+    code: 'Digit5',
+  },
+  {
+    small: '6',
+    caps: '6',
+    shift: ':',
+    code: 'Digit6',
+  },
+  {
+    small: '7',
+    caps: '7',
+    shift: '?',
+    code: 'Digit7',
+  },
+  {
+    small: '8',
+    caps: '8',
+    shift: '*',
+    code: 'Digit8',
+  },
+  {
+    small: '9',
+    caps: '9',
+    shift: '(',
+    code: 'Digit9',
+  },
+  {
+    small: '0',
+    caps: '0',
+    shift: ')',
+    code: 'Digit0',
+  },
+  {
+    small: '-',
+    caps: '-',
+    shift: '_',
+    code: 'Minus',
+  },
+  {
+    small: '=',
+    caps: '=',
+    shift: '+',
+    code: 'Equal',
+  },
+  {
+    small: 'Backspace',
+    caps: false,
+    code: 'Backspace',
+  },
+  {
+    small: 'Tab',
+    caps: false,
+    code: 'Tab',
+  },
+  {
+    small: 'й',
+    caps: 'Й',
+    code: 'KeyQ',
+  },
+  {
+    small: 'ц',
+    caps: 'Ц',
+    code: 'KeyW',
+  },
+  {
+    small: 'у',
+    caps: 'У',
+    code: 'KeyE',
+  },
+  {
+    small: 'к',
+    caps: 'К',
+    code: 'KeyR',
+  },
+  {
+    small: 'е',
+    caps: 'Е',
+    code: 'KeyT',
+  },
+  {
+    small: 'н',
+    caps: 'Н',
+    code: 'KeyY',
+  },
+  {
+    small: 'г',
+    caps: 'Г',
+    code: 'KeyU',
+  },
+  {
+    small: 'ш',
+    caps: 'Ш',
+    code: 'KeyI',
+  },
+  {
+    small: 'щ',
+    caps: 'Щ',
+    code: 'KeyO',
+  },
+  {
+    small: 'з',
+    caps: 'З',
+    code: 'KeyP',
+  },
+  {
+    small: 'х',
+    caps: 'Х',
+    code: 'BracketLeft',
+  },
+  {
+    small: 'ъ',
+    caps: 'Ъ',
+    code: 'BracketRight',
+  },
+  {
+    small: '&#92;',
+    caps: '&#92;',
+    shift: '&#47;',
+    code: 'Backslash',
+  },
+  {
+    small: 'Del',
+    caps: false,
+    code: 'Delete',
+  },
+  {
+    small: 'CapsLock',
+    caps: false,
+    code: 'CapsLock',
+  },
+  {
+    small: 'ф',
+    caps: 'Ф',
+    code: 'KeyA',
+  },
+  {
+    small: 'ы',
+    caps: 'Ы',
+    code: 'KeyS',
+  },
+  {
+    small: 'в',
+    caps: 'В',
+    code: 'KeyD',
+  },
+  {
+    small: 'а',
+    caps: 'А',
+    code: 'KeyF',
+  },
+  {
+    small: 'п',
+    caps: 'П',
+    code: 'KeyG',
+  },
+  {
+    small: 'р',
+    caps: 'Р',
+    code: 'KeyH',
+  },
+  {
+    small: 'о',
+    caps: 'О',
+    code: 'KeyJ',
+  },
+  {
+    small: 'л',
+    caps: 'Л',
+    code: 'KeyK',
+  },
+  {
+    small: 'д',
+    caps: 'Д',
+    code: 'KeyL',
+  },
+  {
+    small: 'ж',
+    caps: 'Ж',
+    code: 'Semicolon',
+  },
+  {
+    small: 'э',
+    caps: 'Э',
+    code: 'Quote',
+  },
+  {
+    small: 'Enter',
+    caps: false,
+    code: 'Enter',
+  },
+  {
+    small: 'Shift',
+    caps: false,
+    code: 'ShiftLeft',
+  },
+  {
+    small: 'я',
+    caps: 'Я',
+    code: 'KeyZ',
+  },
+  {
+    small: 'ч',
+    caps: 'Ч',
+    code: 'KeyX',
+  },
+  {
+    small: 'с',
+    caps: 'С',
+    code: 'KeyC',
+  },
+  {
+    small: 'м',
+    caps: 'М',
+    code: 'KeyV',
+  },
+  {
+    small: 'и',
+    caps: 'И',
+    code: 'KeyB',
+  },
+  {
+    small: 'т',
+    caps: 'Т',
+    code: 'KeyN',
+  },
+  {
+    small: 'ь',
+    caps: 'Ь',
+    code: 'KeyM',
+  },
+  {
+    small: 'б',
+    caps: 'Б',
+    code: 'Comma',
+  },
+  {
+    small: 'ю',
+    caps: 'Ю',
+    code: 'Period',
+  },
+  {
+    small: '.',
+    caps: '.',
+    shift: ',',
+    code: 'Slash',
+  },
+  {
+    small: '▲',
+    caps: false,
+    code: 'ArrowUp',
+  },
+  {
+    small: 'Shift',
+    caps: false,
+    code: 'ShiftRight',
+  },
+  {
+    small: 'Ctrl',
+    caps: false,
+    code: 'ControlLeft',
+  },
+  {
+    small: 'Win',
+    caps: false,
+    code: 'MetaLeft',
+  },
+  {
+    small: 'Alt',
+    caps: false,
+    code: 'AltLeft',
+  },
+  {
+    small: ' ',
+    caps: false,
+    code: 'Space',
+  },
+  {
+    small: 'Alt',
+    caps: false,
+    code: 'AltRight',
+  },
+  {
+    small: '◄',
+    caps: false,
+    code: 'ArrowLeft',
+  },
+  {
+    small: '▼',
+    caps: false,
+    code: 'ArrowDown',
+  },
+  {
+    small: '►',
+    caps: false,
+    code: 'ArrowRight',
+  },
+  {
+    small: 'Ctrl',
+    caps: false,
+    code: 'ControlRight',
+  },
+];
