@@ -86,6 +86,9 @@ class ChangeValues {
       }
       this.switchKeys();
       this.changeActive(e);
+      if (!this.code.match(/ShiftLeft|ShiftRight|ControlRight|ControlLeft|AltLeft|AltRight|MetaLeft|CapsLock/g)) {
+        this.changeTextinput();
+      }
       if (e.type === 'mouseup') { this.isKey = false; }
     }
   }
@@ -157,6 +160,75 @@ class ChangeValues {
         e.target.classList.remove('active');
       }
     }
+  }
+
+  changeTextinput() {
+    const textarea = document.querySelector('textarea');
+    textarea.focus();
+    const objKey = this.obj[this.lang][this.indexKey];
+    let left = textarea.selectionStart;
+    let right = textarea.selectionEnd;
+    if (this.eventType === 'keydown' && objKey.caps) {
+      this.text = this.curentKey.textContent;
+    }
+    const obj1 = {
+      Backspace: () => {
+        left -= 1;
+      },
+      Del: () => {
+        right += 1;
+      },
+      Enter: () => {
+        this.text = '\n';
+      },
+      Tab: () => {
+        this.text = '\t';
+      },
+      Space: () => {
+        this.text = ' ';
+      },
+      ArrowLeft: () => {
+        this.text = '◄';
+      },
+      ArrowRight: () => {
+        this.text = '►';
+      },
+      ArrowUp: () => {
+        this.text = '▲';
+      },
+      ArrowDown: () => {
+        this.text = '▼';
+      },
+    };
+    if (this.eventType === 'keydown' && objKey.code === 'Backspace' && left > 0) {
+      obj1.Backspace();
+    }
+    if (this.eventType === 'keydown' && objKey.code === 'Delete') {
+      obj1.Del();
+    }
+    if ((this.eventType === 'keydown' && objKey.code === 'Enter') || (left - textarea.value.lastIndexOf('\n', left - 1) === 72 && !objKey.code.match(/ArrowUp|ArrowDown|ArrowLeft|Backspace|Delete|ArrowRight/g))) {
+      obj1.Enter();
+    }
+    if (this.eventType === 'keydown' && objKey.code === 'Tab') {
+      obj1.Tab();
+    }
+    if (this.eventType === 'keydown' && objKey.code === 'Space') {
+      obj1.Space();
+    }
+    if (this.eventType === 'keydown' && objKey.code === 'ArrowLeft') {
+      obj1.ArrowLeft();
+    }
+    if (this.eventType === 'keydown' && objKey.code === 'ArrowRight') {
+      obj1.ArrowRight();
+    }
+    if (this.eventType === 'keydown' && objKey.code === 'ArrowUp') {
+      obj1.ArrowUp();
+    }
+    if (this.eventType === 'keydown' && objKey.code === 'ArrowDown') {
+      obj1.ArrowDown();
+    }
+    textarea.setRangeText(this.text, left, right, 'end');
+    this.text = '';
   }
 
   create() {
