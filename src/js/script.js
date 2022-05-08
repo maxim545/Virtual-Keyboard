@@ -85,7 +85,7 @@ class ChangeValues {
         this.changeLang(e);
       }
       this.switchKeys();
-
+      this.changeActive(e);
       if (e.type === 'mouseup') { this.isKey = false; }
     }
   }
@@ -125,6 +125,36 @@ class ChangeValues {
         this.capsLock = !this.capsLock;
         this.shiftAndCaps = !this.shiftAndCaps;
         this.create();
+      }
+    }
+  }
+
+  changeActive(e) {
+    const shiftLeft = document.querySelector("[data-code='ShiftLeft']");
+    const shiftRight = document.querySelector("[data-code='ShiftRight']");
+    if (this.eventType === 'keyup' && this.curentKey.dataset.code === 'CapsLock') {
+      this.eventType = null;
+    }
+    if (this.eventType === 'keydown') {
+      if (this.curentKey.dataset.code === 'CapsLock' && this.curentKey.classList.contains('active_capslock') && !this.repeat) {
+        this.curentKey.classList.remove('active_capslock');
+      } else if (this.curentKey.dataset.code === 'CapsLock' && !this.curentKey.classList.contains('active_capslock') && !this.repeat) {
+        this.curentKey.classList.add('active_capslock');
+      }
+      if (this.curentKey.dataset.code !== 'CapsLock' && !this.curentKey.classList.contains('active')) {
+        this.curentKey.classList.add('active');
+      }
+    } else if (this.eventType === 'keyup' || e.type === 'mouseup') {
+      if (e.code) {
+        if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
+          shiftLeft.classList.remove('active');
+          shiftRight.classList.remove('active');
+          this.keysPress.ShiftRight = false;
+          this.keysPress.ShiftLeft = false;
+        } else { this.curentKey.classList.remove('active'); }
+      }
+      if (e.target.dataset.code) {
+        e.target.classList.remove('active');
       }
     }
   }
