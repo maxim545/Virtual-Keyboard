@@ -148,3 +148,112 @@ body {
     background: url(./images/bg.jpg) no-repeat center center fixed;
     background-size: cover;
 }
+
+.container {
+    margin: 15px auto;
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(176, 176, 176);
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(234, 235, 244);
+}
+
+
+.title {
+    max-width: 460px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color:rgb(255, 255, 255)
+}
+
+.textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    white-space: break-spaces;
+    word-break: break-all;
+    padding: 7px;
+    margin-top: 15px;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    border-radius: 10px;
+    border: 4px solid rgb(219, 219, 219);
+    box-shadow: 0 0 5px rgb(140, 140, 140);
+}
+
+.textarea:focus {
+    outline: none !important;
+  }
+
+.keyboard {
+   width: 100%;
+   margin: auto;
+}
+
+.keyboard__row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+}
+
+.keyboard__key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    min-height: 42px;
+    margin: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.long-2fr {
+    grid-column: 2 span;
+}
+
+.long-5fr {
+    grid-column: 7 span;
+}
+
+.inv {
+    color: #fff;
+    background-color: rgb(104, 104, 104);
+}
+
+.active {
+    color: #fff;
+    background-color: #386ce7;
+}
+
+.active_capslock {
+    font-weight: bold;
+    background-color: #1e5ae7;
+}
+
+.keyboard__key {
+	transition: all 0.4s;
+	position: relative;
+}
+
+.active {
+    font-size: 16px;
+    font-weight: bold;
+    border-radius:  6px;
+    transition: all 0.4s;
+	transform: translateY(-6px);
+    box-shadow: 0px 3px 1.5px 3px rgb(136, 136, 136);
+}
+
+.keyboard__key:hover {
+    background-color: #5278ff;
+    color: #fff;
+    transition: all 0.4s;
+    border-radius: 5px;
+}
