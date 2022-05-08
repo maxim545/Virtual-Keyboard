@@ -200,10 +200,10 @@ class ChangeValues {
         this.text = '▼';
       },
     };
-    if (this.eventType === 'keydown' && objKey.code === 'Backspace' && left > 0) {
+    if (this.eventType === 'keydown' && objKey.code === 'Backspace' && left > 0 && left === right) {
       obj1.Backspace();
     }
-    if (this.eventType === 'keydown' && objKey.code === 'Delete') {
+    if (this.eventType === 'keydown' && objKey.code === 'Delete' && left === right) {
       obj1.Del();
     }
     if ((this.eventType === 'keydown' && objKey.code === 'Enter') || (left - textarea.value.lastIndexOf('\n', left - 1) === 72 && !objKey.code.match(/ArrowUp|ArrowDown|ArrowLeft|Backspace|Delete|ArrowRight/g))) {
