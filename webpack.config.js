@@ -21,6 +21,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
+      title: 'Virtual Keyboard',
+      favicon: './src/images/favicon.ico',
     }),
   ],
 };
